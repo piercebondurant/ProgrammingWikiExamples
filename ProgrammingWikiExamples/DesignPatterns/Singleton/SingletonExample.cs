@@ -8,6 +8,6 @@ namespace ProgrammingWikiExamples.DesignPatterns.Singleton
 {
     public class SingletonExample
     {
-        public SingletonExample() { }
+
     }
 }
