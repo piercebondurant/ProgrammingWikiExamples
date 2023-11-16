@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgrammingWikiExamples.DesignPatterns.Singleton
+namespace ProgrammingWikiExamples.DesignPatterns.Factory.Interfaces
 {
-    public class SingletonExample
+    internal interface ISorter
     {
-
     }
 }
