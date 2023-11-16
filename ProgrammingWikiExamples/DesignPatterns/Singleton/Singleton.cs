@@ -8,6 +8,6 @@ namespace ProgrammingWikiExamples.DesignPatterns.Singleton
 {
     public class Singleton
     {
-
+        //Random
     }
 }
