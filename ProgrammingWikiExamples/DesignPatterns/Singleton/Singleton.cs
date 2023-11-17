@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProgrammingWikiExamples.DesignPatterns.Singleton
 {
-    public class SingletonExample
+    public class Singleton
     {
-
+        //Random
     }
 }
