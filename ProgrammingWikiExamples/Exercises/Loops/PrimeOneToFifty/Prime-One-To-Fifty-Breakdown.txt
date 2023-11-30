@@ -1,0 +1,85 @@
+﻿If we want to do something 10 times, we use a normal loop. Makes sense right?
+
+for(int i = 0; i < 10; i++)
+{
+    // code here
+}
+
+If we want to do something 50 times, we can do the same loop of doing something 10 times, 5 times. Meaning we do 10 loops, 5 times. 5 * 10 = 50.
+
+for(int i = 0; i < 5; i++)
+{
+    for(int j = 0; j < 10; j++)
+    {
+        // code here
+    }
+}
+
+This will execute "code here" 50 times, since we loop 5 times, and each of those 5 times, we do our inner loop, which runs 10 times. 5 * 10 = 50.
+
+Let's simplify the problem first. We are trying to determine if only one number is prime (wholly divisible by only 1 and itself) or composite. Say our number is x.
+
+for(int j = 2; j < x; j++)
+{
+    if(x % j == 0)         //if this condition is true, we have found a whole division. This means the number is composite, and therefore not prime.
+        isPrime = false;
+}
+if(isPrime)
+    Console.WriteLine("i is prime: " + isPrime);
+
+This program will determine if x is prime and print the results. Now, let's say we want to do this process for every number between 1 and 50 like the problem asks.
+
+Rather than typing this code 50 times to achieve this problem, what can we use to repeat this code 50 times? Well, loops are the go-to tool for repeating code, so let's do that.
+
+Ignore the above code, and instead pretend we can just type "PrimeOrComposite();" instead to do the above code.
+
+Now, the problem becomes simple. We write a loop to do "PrimeOrComposite()" 50 times.
+
+for(int i = 1; i < 50; i++)
+{
+    PrimeOrComposite();
+}
+
+Now all that's left to do is fill in the gaps. Let's start by just plugging in the code from earlier exactly, since that code will determine if a single number is prime.
+
+for(int i = 1; i < 50; i++)
+{
+    for(int j = 2; j < x; j++)
+    {
+        if(x % j == 0)         //if this condition is true, we have found a whole division. This means the number is composite, and therefore not prime.
+            isPrime = false;
+    }
+    if(isPrime)
+        Console.WriteLine("i is prime: " + isPrime);
+}
+
+Now we have to ask, what is the number we're trying to determine isPrime or not?
+
+We can look at the code and ask ourselves the original problem again. The problem states we need to do our code for every number between 1 and 50. 
+
+What in the code we have will at some point be every number between 1 and 50?
+
+The answer to that is i. Since i will be every number between 1 and 50, we can plug it in for x.
+
+for(int i = 1; i < 50; i++)
+{
+    for(int j = 2; j < i; j++)
+    {
+        if(i % j == 0)         //if this condition is true, we have found a whole division. This means the number is composite, and therefore not prime.
+            isPrime = false;
+    }
+    if(isPrime)
+        Console.WriteLine("i is prime: " + isPrime);
+}
+
+Now, we have our final code that determines all numbers that are prime between 1 and 50.
+
+In conclusion, we need a nested loop here because to determine if ONE number is prime, we need a loop. So if we want to do that for multiple numbers, we simply need to do that multiple times.
+
+To answer your questions more directly now that we have the context of this problem:
+
+"j < i" is there because we need to stop at some point, and we know that any number divided by itself will wholly divide, and any number greater than itself will not. Therefore, it is the natural stopping point. 
+
+i % (i + 1) == 1    ->    i % (i + 2) == 2     ->     i % (i + n) == n
+
+In general for all parts of this problem, we have to break down into smaller pieces how to come to each conclusion. This is something generally referred to as your "problem solving skill," and will grow over time naturally as you are more and more exposed to these kinds of problems.
