@@ -19,11 +19,9 @@ namespace ProgrammingWikiExamples.DesignPatterns.Factory.Sorters
                         int temp = array[i];
                         array[i] = array[j];
                         array[j] = temp;
-                        
                     }
                 }
             }
-
             return array;
         }
         
