@@ -1,0 +1,49 @@
+Bubble Sort consists in go through an array (or list) multiple time comparing the adjacent elements, moving the bigger one to the right.
+In essence, each item "bubbles" to where it belongs.
+
+First, it is necessary to be able to go through the whole array. We can do that using a "for loop", and using the Length method and the initial variable "i" in 0
+to go from the begining to the end of the array.
+
+for(int i  = 0; i < array.Length; i++)
+ {
+ }
+
+Inside the first loop, we are going to use a second loop to check the element against every other element.
+
+for(int i  = 0; i < array.Length; i++)
+{
+    for(int j = 0; j < array.Length; j++)
+    {                 
+    }
+}
+
+When the element on the left is bigger than the element of the right, we swap them using a temporal variable.
+
+for(int i  = 0; i < array.Length; i++)
+{
+    for(int j = 0; j < array.Length; j++)
+    {
+        if (array[i] < array[j])
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;                  
+        }
+    }
+}
+
+Finally we return the sorted array
+
+for(int i  = 0; i < array.Length; i++)
+{
+    for(int j = 0; j < array.Length; j++)
+    {
+        if (array[i] < array[j])
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;                  
+        }
+    }
+}
+return array;
