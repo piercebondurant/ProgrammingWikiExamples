@@ -8,6 +8,20 @@ namespace ProgrammingWikiExamples.DesignPatterns.Singleton
 {
     public class Singleton
     {
-        //chris was here
+        //singleton class example
+    }
+}
+public class MySingleton
+{
+    private static MySingleton instance = new MySingleton();
+    private MySingleton() { }
+    public static MySingleton Instance
+    {
+        get { return instance; }
+    }
+    public void DoSTuff()
+    {
+        Console.WriteLine("singleton called");
+        Console.ReadKey();
     }
 }
